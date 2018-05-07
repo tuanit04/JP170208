@@ -1,0 +1,76 @@
+package j2se;
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author  Tuan
+ * @version 1.0
+ */
+public class Address {
+    //Constants
+    public static final String CITYNAME = "NO CITYNAME";
+    public static final String DISTRICTNAME = "NO DISTRICTNAME";
+    public static final String STREETNAME = "NO STREETNAME";
+    public static int count = 0;
+    //Object's properties
+    private String cityName;
+    private String districtName;
+    private String streetName;
+    //Constructor methods
+    public Address(){
+        this(CITYNAME,DISTRICTNAME,STREETNAME);
+    }
+    public Address(String cityName,String districtName,String streetName) {
+        this.cityName = cityName;
+        this.districtName = districtName;
+        this.streetName = streetName;
+        Address.count ++;
+    }
+    //Setter methods
+    public Address setCityName(String cityName){
+        this.cityName = cityName;
+        return this;
+    }
+    public Address setDistrictName(String districtName){
+        this.districtName = districtName;
+        return this;
+    }
+    public Address setStreetName(String streetName){
+        this.streetName = streetName;
+        return this;
+    }
+    //Getter methods
+    public String getCityName(){
+        return this.cityName;
+    }
+    public String getDistrictName(){
+        return this.districtName;
+    }
+    public String getStreetName(){
+        return this.streetName;
+    }
+    //Other methods
+    public String toString(){
+        return "City name : " +this.cityName +  " - " + "District Name : " +
+                this.districtName + " - " + "Street Name : " + this.streetName;
+    }
+    public static int getCountAddrees(){
+            return Address.count;
+        }
+        protected void finalize() throws Throwable{
+            Address.count--;
+            super.finalize();
+    }
+    public static void main(String[] args) {
+        Address address1 = new Address();
+        System.out.println(address1);
+        address1.setCityName("Ha Noi","Nhon","QL 32")
+    }
+
+}

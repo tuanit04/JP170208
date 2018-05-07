@@ -1,0 +1,36 @@
+package Exercises;
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Quang
+ * @version 1.0
+ */
+
+
+public class HinhTron {
+    public static float getCVHinhTron(float r) {
+        float cv=0;
+        if(r>0){
+            cv=2*((float)(Math.PI)*r*r);
+        }
+        return cv;
+    }
+    public static float getDTHinhTron(float r){
+        float dt=0;
+        if(r>0){
+            dt=(float)(Math.PI)*r*r;
+        }
+        return dt;
+    }
+
+    public static void main(String[] args) {
+        HinhTron hinhtron = new HinhTron();
+    }
+}

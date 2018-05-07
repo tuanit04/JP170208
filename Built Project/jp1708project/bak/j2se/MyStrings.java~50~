@@ -1,0 +1,152 @@
+package j2se;
+
+import java.util.ArrayList;
+
+public class MyStrings {
+    public MyStrings() {
+    }
+
+    /**
+     * Dem ky tu co trong chuoi
+     * @param str String
+     * @param ch char
+     * @param isIgnoreCase boolean
+     * @return int
+     */
+    public static int countChar(String str, char ch, boolean isIgnoreCase){
+        int count = 0;
+        if(isIgnoreCase){
+            str = str.toLowerCase();
+            ch = Character.toLowerCase(ch);
+        }
+        for(int i=0; i<str.length();i++){
+            if(str.charAt(i)==ch){
+                count++;
+            }
+        }
+        return count;
+    }
+    /**
+     * Chuan hoa chuoi ky tu
+     * @param str String
+     * @return String
+     */
+
+    public static String formatString(String str){
+        //Khai bao danh sach cac ky tu dac biet
+        char[] chs={
+                   '~','`','!','@','#','$',
+                   '%','^','&','*','(',')',
+                   '-','_','=','+','|','\\',
+                   ';',':','/','?','.',',',
+                   '>','<','[',']','{','}',
+                  '\'', '"'
+        };
+
+        //Loai bo ky tu dac biet
+        for(char ch: chs){
+            str = str.replace(ch, ' ');
+        }
+
+        //cat bo khoang trong dau cuoi
+        str= str.trim();
+
+        //Loai bo dau cach thua trong chuoi
+        while(str.indexOf("  ")!=-1){
+            str = str.replace("  "," ");
+        }
+
+        return str;
+    }
+
+    /**
+     * Dem so tu trong chuoi
+     * @param str String
+     * @return int
+     */
+    public static int countWords(String str){
+        //Chuan hoa
+        str = MyStrings.formatString(str);
+
+        return MyStrings.countChar(str,' ',false)+1;
+    }
+
+    /**
+     * kiem tra tan suat xuat hien cac ky tu trong chuoi
+     * @param str String
+     * @return ArrayList
+     */
+    public static ArrayList frequenceChar(String str, boolean isIgnoreCase){
+
+        if(isIgnoreCase){
+            str = str.toLowerCase();
+
+        }
+
+        //Lay danh sach cac ky tu khac nhau trong chuoi
+        String chs = "";
+        char ch;
+        String tmp = str.trim();
+        for(int i=0; i<tmp.length();i++){
+            ch = tmp.charAt(i);
+            if(ch!=' '){
+                chs +=ch;
+                tmp = tmp.replace(ch, ' ');
+            }
+        }
+        ArrayList fres = new ArrayList(chs.length());
+        int count;
+        for(int i=0;i<chs.length();i++){
+
+            ch = chs.charAt(i);
+            count = MyStrings.countChar(str, ch, isIgnoreCase);
+            fres.add("["+ch+","+count+"]");
+        }
+        return fres;
+    }
+    /**
+     * Cat ra mot so luong tu trong chuoi
+     * @param str String
+     * @param nWords byte
+     * @return String
+     */
+    public static String getWords(String str, byte nWords){
+
+       //Chuan hoa
+       str = MyStrings.formatString(str);
+
+       //Xac dinh vi tri de cat
+       int i;
+       int count=0; //dem dau cach
+       for(i=0;i<str.length();i++){
+           if(str.charAt(i)==' '){
+               count++;
+           }
+           if(count >= nWords){
+               break;
+           }
+       }
+       //Thuc hien cat
+       if(i<str.length()-1){
+           return str.substring(0,i)+"....";
+       }else{
+           return str;
+       }
+
+    }
+
+
+
+    public static void main(String[] args) {
+
+
+        String str ="How    are you   to   day";
+
+        System.out.println(MyStrings.getWords(str,(byte) 3));
+
+        /*BTVN: Chuan hoa con so
+        viet hoa ten rieng.
+       Muc do giong nhau cua hai chuoi ky tu.
+        */
+    }
+}

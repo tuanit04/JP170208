@@ -1,0 +1,352 @@
+<!-- Thiết kế tổng hợp mẫu Logicstic -->
+
+<html>
+	<head>
+		<title>Nguyên mẫu Logicstic</title>
+		<link rel = "stylesheet" href = "css/layout.css" type = "text/css"/>
+		<script language = "JavaScript" src = "js/gui.js"></script>
+		<script language = "JavaScript" src = "js/tooltip.js"></script>
+		<script language = "javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script language = "javascript" src="js/custom.js"></script>
+
+	</head>
+	<body onload = "setFirstTime(document.frmSearch)">
+		<div class="main" id = "top">
+			<div class = "top">
+				<div class = "search">
+					<form name = "frmSearch" action = "" method = "">
+						<input type = "text" name = "txtKeyword" size = "25" onClick = "setKeyWord(this.form, true)" onblur= "setKeyWord(this.form, false)" checkValidKeyWord/>
+						<input type = "button" value = "Tìm kiếm" onClick = "checkValidKeyWord(this.form)"/>
+					</form>
+				</div>
+				
+				<div class = "acc">
+					<a href = "#">Đăng kí</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href = "#">Hỗ trợ</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href = "#">Hướng dẫn thanh toán</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href = "#">Liên hệ</a>
+				</div>
+				
+				<div class = "clr">
+				</div>
+			</div>
+			<div class = "header">
+			
+			</div><!--Close header -->
+			<div class = "menu">
+			<div class = "boxed">
+				<a href = "#"><h3>Trang chủ</h3></a>
+				<a href = "#"><h3>Giới thiệu</h3></a>
+				<a href = "#"><h3>Tin tức</h3></a>
+				<a href = "#"><h3>Sản phẩm</h3></a>
+				<a href = "#"><h3>Dịch vụ</h3></a>
+				<a href = "#"><h3>Tuyển dụng</h3></a>
+				<a href = "#"><h3>Liên hệ</h3></a>
+			</div>
+			</div><!--Close menu -->
+			
+			<div class = "boxed">
+				<div class = "intros">
+					<!--tmp -->
+					<div class="slider-wrapper theme-default">
+					<div id="slider" class="nivoSlider">
+						<a href="#"><img src="Pictures/intros/toystory.jpg" alt="" title="Giá xăng 'làm giá' đến bao giờ" /></a>
+						<a href="#"><img src="Pictures/intros/up.jpg"  alt=""  /></a>
+						<a href="#"><img src="Pictures/intros/walle.jpg"  alt="" data-transition="slideInLeft" /></a>
+						<a href="#"><img src="Pictures/intros/nemo.jpg" alt=""  /></a>
+					</div>
+					</div><!--End .slider-wrapper-->
+					<script language="javascript" type="text/javascript" src="js/jquery-1.7.1.min.js"></script> 
+					<script language="javascript" type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+					<script type="text/javascript">
+						$(window).load(function() {
+							$('#slider').nivoSlider();
+						});
+					</script>
+				</div><!--Close intros -->
+				<div class = "content">
+					<div class = "view">
+
+						<div class = "focus">
+							<div class = "f3">
+								<img src = "pictures/fly.jpg"/>
+								<a href = "#">
+									<h3>Vietnam Airlines tự hào là hãng hàng không quốc tế 4 sao</h3>
+								</a>	
+							</div>
+							<div class = "f3 fc">
+								<img src = "pictures/fly.jpg"/>
+								<a href = "#">
+									<h3>Trải nghiệm 4 sao cùng Vietnam Airlines</h3>
+								</a>
+							</div>
+							<div class = "f3">
+								<img src = "pictures/fly.jpg"/>
+								<a href = "#">
+									<h3>Vietnam Airlines hãng hàng không số 1 Việt Nam</h3>
+								</a>
+							</div>
+							<div class = "clr">
+							</div>
+						</div><!--Close focus mb-->
+						<div class = "sections">
+							<div class = "sections-titles">
+								<a href="#"><h3>Giới thiệu</h3></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="#">Văn hóa</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="#">Cổ đông</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="#">Cơ cấu</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="#">Sứ mệnh</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="#">Tầm nhìn</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+							</div><!--Close sections titles -->
+							
+							<div class = "sections-contents">
+								<div class = "sections-contents-left">
+									<img src = "pictures/vietnam.png"/>
+									<a href = "#">
+										<h3>Báo chí châu lục khen Việt Nam 'quả cảm' ở giải U23 châu Á</h3>
+									</a>
+									<p>
+									Vào tứ kết sau trận thứ hai liên tiếp giữ sạch lưới, hàng thủ Việt Nam được truyền thông châu Á ngợi ca.
+									</p>
+								</div>
+								<div class = "sections-contents-right">
+									<a href = "#" onMouseOver = "showtip(viewContentsRight[0])" onMouseOut = "hidetip()"><h3>Djokovic hạ Monfils dưới cái nắng 39 độ ở Melbourne</h3></a>
+									<a href = "#" onMouseOver = "showtip(viewContentsRight[1])" onMouseOut = "hidetip()"><h3>Golden State Warriors thắng trận thứ 14 liên tiếp trên sân khách</h3></a>
+									<a href = "#"><h3>Làng golf có thể không còn được chứng kiến những cú phát bóng xa</h3></a>
+									<a href = "#"><h3>Golden State Warriors hạ Cleveland Cavaliers lần thứ hai trong ba tuần</h3></a>
+									<a href = "#"><h3>Ca sĩ Christina Perri sinhádfgjkl con đầu lòng</h3></a>
+									<a href = "#"><h3>Hoa hậu Đinh Hiền Anh ngồi 'ghế nóng' cuộc thi nhan sắc tại Singapore</h3></a>
+									<a href = "#"><h3></h3></a>
+								</div>
+								<script language = "javascript">
+									var viewContentsRight = new Array();
+									viewContentsRight[0] = "<table cellspacing = 0>";
+									viewContentsRight[0] += "<tr><th>";
+									viewContentsRight[0] += "Djokovic hạ Monfils dưới cái nắng 39 độ ở Melbourne";
+									viewContentsRight[0] += "</th></tr>";
+									viewContentsRight[0] += "<tr><td>";
+									viewContentsRight[0] += "<img src = 'Pictures/thethao.png' id = itt />";
+									viewContentsRight[0] += "Trận đấu bòn rút thể lực hai tay vợt ở vòng ba Australia Mở rộng kết thúc với phần thắng 4-6, 6-3, 6-1, 6-3 cho cựu số một thế giới.";
+									viewContentsRight[0] += "</td></tr>";
+									viewContentsRight[0] += "</table>";
+									<!--Sau này dùng java -->
+									viewContentsRight[1] = "<table cellspacing = 0>";
+									viewContentsRight[1] += "<tr><th>";
+									viewContentsRight[1] += "Golden State Warriors thắng trận thứ 14 liên tiếp trên sân khách";
+									viewContentsRight[1] += "</th></tr>";
+									viewContentsRight[1] += "<tr><td>";
+									viewContentsRight[1] += "<img src = 'Pictures/golden.jpg' id = itt />";
+									viewContentsRight[1] += "Trận đấu bòn rút thể lực hai tay vợt ở vòng ba Australia Mở rộng kết thúc với phần thắng 4-6, 6-3, 6-1, 6-3 cho cựu số một thế giới.";
+									viewContentsRight[1] += "</td></tr>";
+									viewContentsRight[1] += "</table>";
+								</script>
+								<div class = "clr">
+								</div>
+							</div><!--Close sections contents -->
+							
+						</div><!--Close sections -->
+						<div class = "sections">
+							<div class = "sections-titles">
+								<a href="#"><h3>Giới thiệu</h3></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="#">Văn hóa</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="#">Cổ đông</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="#">Cơ cấu</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="#">Sứ mệnh</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+								<a href="#">Tầm nhìn</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+							</div><!--Close sections titles -->
+							
+							<div class = "sections-contents">
+								<div class = "sections-contents-left">
+									<img src = "pictures/vietnam.png"/>
+									<a href = "#">
+										<h3>Báo chí châu lục khen Việt Nam 'quả cảm' ở giải U23 châu Á</h3>
+									</a>
+									<p>
+									Vào tứ kết sau trận thứ hai liên tiếp giữ sạch lưới, hàng thủ Việt Nam được truyền thông châu Á ngợi ca.
+									</p>
+								</div>
+								<div class = "sections-contents-right">
+									<a href = "#"><h3>Djokovic hạ Monfils dưới cái nắng 39 độ ở Melbourne</h3></a>
+									<a href = "#"><h3>Golden State Warriors thắng trận thứ 14 liên tiếp trên sân khách</h3></a>
+									<a href = "#"><h3>Làng golf có thể không còn được chứng kiến những cú phát bóng xa</h3></a>
+									<a href = "#"><h3>Golden State Warriors hạ Cleveland Cavaliers lần thứ hai trong ba tuần</h3></a>
+									<a href = "#"><h3>Ca sĩ Christina Perri sinh con đầu lòng</h3></a>
+									<a href = "#"><h3>Hoa hậu Đinh Hiền Anh ngồi 'ghế nóng' cuộc thi nhan sắc tại Singapore</h3></a>
+								</div>
+								<div class = "clr">
+								</div>
+							</div><!--Close sections contents -->
+							
+						</div><!--Close sections -->
+					</div><!--Close view -->
+					<div class = "rview">
+						<div class = "titles">Tin tức mới</div>
+						<div class = "news">
+							<a href = "#"><h3>
+								<img src = "Pictures/cachchuc.jpg"/>
+								Phó chủ tịch Thanh Hóa Ngô Văn Tuấn bị cách chức
+								<div class = "clr"></div>
+								</h3>
+							</a>
+							<a href = "#"><h3>
+								<img src = "Pictures/caytrong.jpg"/>
+								Tranh cãi việc trồng phong lá đỏ ở đường phố Hà Nội
+								<div class = "clr"></div>
+								</h3>
+							</a>
+							<a href = "#"><h3>
+								<img src = "Pictures/daihoc.jpg"/>
+								Yêu cầu điểm SAT của nhóm đại học kỹ thuật hàng đầu Mỹ
+								<div class = "clr"></div>
+								</h3>
+							</a>
+							<a href = "#"><h3>
+								<img src = "Pictures/tienganh.jpg"/>
+								Trắc nghiệm về câu chủ động và bị động trong tiếng Anh
+								<div class = "clr"></div>
+								</h3>
+							</a>
+							<a href = "#"><h3>
+								<img src = "Pictures/tienganh1.jpg"/>
+								Học tiếng Anh: Mẹo tuyển người của cha đẻ Apple
+								<div class = "clr"></div>
+								</h3>
+							</a>
+						</div><!--Close news -->
+						
+						<div class = "most-view news">
+							<marquee direction = "up" scrolldelay = "50" scrollamount = "3" onMouseOver = "stop()" onMouseOut = "start()">
+							   <a href = "#"><h3>
+								<img src = "Pictures/tienganh1.jpg"/>
+								Học tiếng Anh: Mẹo tuyển người của cha đẻ Apple
+								<div class = "clr"></div>
+								</h3>
+							   </a>
+							   <a href = "#"><h3>
+								<img src = "Pictures/tienganh1.jpg"/>
+								Học tiếng Anh: Mẹo tuyển người của cha đẻ Apple
+								<div class = "clr"></div>
+								</h3>
+							   </a>
+							   <a href = "#"><h3>
+								<img src = "Pictures/tienganh1.jpg"/>
+								Học tiếng Anh: Mẹo tuyển người của cha đẻ Apple
+								<div class = "clr"></div>
+								</h3>
+							   </a>
+							</marquee>
+						</div>
+						<div class = "forAdvs">
+							<img src = "Pictures/anh1.jpeg"/>
+							<img src = "Pictures/anh2.jpeg"/>
+							<img src = "Pictures/anh3.gif"/>
+						</div>
+					</div><!--Close rview -->
+					<div class = "clr">
+					</div>
+					<div class = "bview">
+						<div class="slide-holder">
+						<div class="slide-pager">
+							<div class="slide-control-prev">«</div>
+							<div class="slide-control-next">»</div>
+						</div>
+						<div class="slide-container">
+							<div class="slide-stage">
+								<div class="slide-image">
+									<img src="Pictures/tienganh1.jpg"/>
+									<a href = "#">
+									<h4>Học tiếng anh mỗi ngày</h4>
+									</a>
+								</div>
+								<div class="slide-image">
+									<img src="Pictures/fly.jpg"/>
+									<a href = "#">
+									<h4>Bay cùng Vietnam Airlines</h4>
+									</a>
+								</div>
+								<div class="slide-image">
+									<img src="Pictures/tienganh.jpg"/>
+									<a href = "#">
+									<h4>Tự tin với tiếng anh</h4>
+									</a>
+								</div>
+								<div class="slide-image">
+									<img src="Pictures/thethao.png"/>
+									<a href = "#">
+									<h4>Thể thao nổi bật hôm nay</h4>
+									</a>
+								</div>
+								<div class="slide-image">
+									<img src="Pictures/thethao.png"/>
+									<a href = "#">
+									<h4>Thể thao nổi bật</h4>
+									</a>
+								</div>
+								<div class="slide-image">
+									<img src="Pictures/tienganh1.jpg"/>
+									<a href = "#">
+									<h4>Tiếng anh giao tiếp</h4>
+									</a>
+								</div>
+							</div><!--Close slide-stage -->
+						</div>
+						</div><!--Close slide-holder -->
+					</div><!--Close bview -->
+				</div><!--Close content -->
+				<div class = "rcontent">
+					<div class = "video">
+						<iframe width="260" height="260" src="https://www.youtube.com/embed/_FDBPJje0lY?rel=0&modestbranding=1" 
+						frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+					
+					<div class = "forAdvs">
+						<img src = "Pictures/anh1.jpeg"/>
+						<img src = "Pictures/anh2.jpeg"/>
+					</div>
+					<div class = "support">
+						<!--
+						Bài tập cho cả nhóm, Chèn FACEBOOK vào đây
+						-->
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdaynhauhoc%2F&tabs&width=300&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+						width="260" style="border:none;overflow:hidden" 
+						scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					</div>
+				</div><!--Close rcontent -->
+				<div class = "clr"></div>
+				<div class = "menu-bottom">
+					<a href="#">Trang chủ</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">Giới thiệu</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">Tin tức</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">Sản phẩm</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">Dịch vụ</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">Tuyển dụng</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">Liên hệ</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>	<!--Close boxed -->
+			<div class = "footer-content">
+				<div class = "footer">
+		           <!--
+						Bài tập cho cả nhóm, chọn 1 mẫu bất kì rồi trình bày
+						-->	
+					<div class = "footer-left">
+						<h2>Cơ quan của TW Hội Khuyến học Việt Nam</h2><br/>
+						<h4>Giấy phép hoạt động báo điện tử Dân trí trên Internet số 378/GP - BTTTT Hà Nội, ngày 16-09-2013.</h4><br/>
+						<h4>Tòa soạn: Số 2 (nhà 48) Giảng Võ, Quận Đống Đa, Hà Nội</h4><br/>
+						<h4>Điện thoại: 024-3736-6491. Fax: 024-3736-6490</h4><br/>
+						<h4>Email: <i>info@dantri.com.vn</i>. Website: <i>http://www.dantri.com.vn</i> </h4><br/>
+						<h4><i>Mọi hành động sử dụng nội dung đăng tải trên Báo điện tử Dân trí tại địa chỉ www.dantri.com.vn phải xin phép</i></h4><br/>
+					</div>
+					<div class = "footer-right">
+						<img src="Pictures/vccorp.png"/>
+							<div>Đơn vị quảng cáo: <img src = "Pictures/advs.png"/></div>
+							<div>Hotline: 0942.86.11.33</div>
+							<div>Email: quangcao@admicro.vn</div>
+							Website: www.admicro.vn
+					</div>					
+					<div class = "clr"><div>
+					<div class = "up"><a href = "#top"><h3>Lên đầu trang<h3></a><img src = "IMGS/up.png"/></div>
+				</div> <!--Close footer -->
+			</div><!--Close b -->
+		</div>
+		<script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",76537]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>  
+	</body>
+</html>

@@ -1,0 +1,305 @@
+﻿/*Các xử lý định dạng cho layout.html*/
+@import url('basic.css');
+@import url('default.css');
+@import url('nivo-slider.css');
+@import url('tooltip.css');
+.main{
+	min-width:1080px;
+	height:auto;
+	margin:0 auto;
+}
+.top{
+	margin: 30px 60px;
+	
+}
+.search{
+	width: auto;
+	float: right;
+	text-align: right;
+}
+.acc{
+	width:auto;
+	float: right;
+	margin : 4px 50px 0 0;
+}
+.header{
+	height:141px;
+	background: #034592 url('../imgs/header_bg.jpg') no-repeat center;
+}
+.menu{
+	height:60px;
+	background: url('../imgs/menu_bg.jpg') repeat-x bottom;
+	margin:15px 0; 
+}
+.menu h3{
+	font: bold 12px tahoma;
+	padding : 20px 30px;
+	margin-top: 3px;
+	float:left;
+	color: #fff;
+	text-transform: uppercase;
+}
+.menu h3:hover{
+	background: #eee;
+	color: #222;
+}
+.boxed{
+	width:1080px;
+	height:auto;
+	margin: 20px auto;
+}
+.intros{
+	height: 430px;
+	margin-bottom: 25px;
+}
+.content{
+	width:790px;
+	height: auto;
+	float:left;
+}
+.view{
+	width:500px;
+	height:auto;
+	float:left;
+}
+
+.focus{
+	height:auto;
+	margin-bottom: 25px;
+}
+.f3{
+	width:150px;
+	height:220px;
+	float:left;
+	overflow: hidden;
+}
+.fc{
+	margin:0px 25px;
+}
+.f3 img{
+	width: 100%;
+	height:120px; 
+	margin-bottom: 20px;
+}
+.f3 h3{
+	font: bold 12px tahoma;
+	line-height: 25px;
+	text-align : justify;
+	margin-bottom: 20px;
+}
+.sections{
+	height:auto;
+	margin-bottom:20px;
+}
+.sections-titles{
+	height:30px;
+	background:#555;
+	color:#fff;
+	padding:12px 0 0 0;
+}
+.sections-titles h3{
+	font:bold 13px tahoma;
+	width: auto;
+	padding:0 0 10px 10px;
+	float:left;
+	margin-right:20px;
+	color: #aaa;
+}
+.sections-titles a{
+	color:#fff;
+}
+.sections-contents{
+	height:auto;
+	padding-top:10px;
+}
+.sections-contents-left{
+	width:260px;
+	height:300px;
+	float:left;
+	overflow: hidden;
+}
+.sections-contents-left img{
+	width: 260px;
+	height: 150px;
+	margin-bottom: 15px;
+}
+.sections-contents-left a{
+	font: bold 14px tahoma;
+	text-align : justify;
+	line-height: 20px;
+	color: #333;
+}
+.sections-contents-left p{
+	font: normal 12px tahoma;
+	text-align: justify;
+	margin: 10px 0;
+	line-height: 18px;
+	text-indent: 20px;
+}
+.sections-contents-right{
+	width:220px;
+	height:300px;
+	float:right;
+}
+.sections-contents-right h3{
+	font: bold 12px tahoma;
+	padding: 8px 0;
+	border-bottom:1px dotted #aaa;
+	text-align: justify;
+}
+.sections-contents-right h3:hover{
+	background:#555;
+	color: #fff;
+}
+.rview{
+	width:260px;
+	height:auto;
+	float: right;
+}
+.titles{
+	font:bold 12px tahoma;
+	color: #fff;
+	background: #666;
+	padding : 12px;
+	text-align:center;
+	text-transform: uppercase;
+}
+.news{
+	margin:20px 0;
+}
+.news h3{
+	font: normal 12px tahoma;
+	text-align: justify;
+	line-height: 20px;
+	padding-bottom:8px;
+	margin-bottom: 8px;
+	border-bottom: 1px solid #eee;
+}
+.news img{
+	width:100px;
+	height: 80px;
+	float:left;
+	margin-right: 20px;
+}
+.most-view marquee{
+	height: 300px;
+	background: #efee;
+}
+.forAdvs{
+	margin: 20px 0;
+}
+.forAdvs img{
+	width: 260px;
+	margin-bottom: 10px;
+}
+.bview{
+	height: auto;
+	margin: 20px 0;
+}
+.slide-holder{
+	margin:0 auto;
+}
+.slide-container { /*slide-container là khối bao mà slide-stage có thể "trượt" bên trong */
+	height: 150px;
+	width: 100%;
+	overflow: hidden;
+	position:relative;
+}
+.slide-stage{
+	position: absolute;
+}
+.slide-image { /*Độ rộng của .slide-image có thể được thay đổi theo nhu cầu, ảnh hưởng đến độ rộng chung của slideshow*/
+	float:left;
+	width:180px;
+	height:150px;
+	text-align: center;
+}
+.slide-image img{
+	width:95%;
+	margin:0 auto;
+}
+.slide-pager{
+	position:relative;
+}
+.slide-control-prev {
+	position: absolute;
+	text-align: center;
+	width: 25px;
+	height: 60px;
+	background: orange;
+	line-height: 60px;
+	color: #fff;
+	cursor: pointer;
+	top: 35px;
+	left: -30px;
+}
+.slide-control-next{
+	position: absolute;
+	text-align: center;
+	width: 25px;
+	height: 60px;
+	background: orange;
+	line-height: 60px;
+	color: #fff;
+	cursor: pointer;
+	right: -30px;
+	top: 35px;
+}
+.rcontent{
+	width:260px;
+	height:auto;
+	float: right;
+}
+.video{
+	margin-bottom: 20px;
+}
+.support{
+	height: auto;
+	background: #ddd;
+}
+.menu-bottom{
+	margin:20px 0;
+	padding : 10px;
+	background:#eee;
+	font:bold 12px tahoma;
+	color : #444;
+}
+.footer-content{
+	border-top:3px solid #888888;
+	height:auto;
+	background :#222222;
+	margin: 20px 0;
+	font-family:Swiss;
+	color:#DDDDDD;
+}
+.footer{
+	margin:0 auto;
+	width:1080px;
+}
+.footer-left{
+	margin-top:5px;
+	text-align:left;
+	float:left;
+}
+.footer-right{
+	margin-top:30px;
+	text-align:left;
+	float: right;
+	margin-right:40px;
+}
+.up img{
+	width:30px;
+	height:30px;
+	transition: all 0.8s;
+}
+.up:hover img{
+	transform: rotate(1turn);
+	color:#fff;
+}
+.up:hover h3{
+	color:#fff;
+}
+.up h3{
+	color:#999;
+	padding-bottom:10px;
+}

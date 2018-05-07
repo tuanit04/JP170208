@@ -1,0 +1,40 @@
+package Exercises;
+import java.util.Scanner;
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Quang
+ * @version 1.0
+ */
+public class TamGiac {
+    public static int  getChuViTamGiac(int a, int b, int c) {
+        int cv=0;
+        if(a+b>c && a+c>b && b+c>a){
+            cv=a+b+c;
+        }
+        return cv;
+    }
+
+    public static int getDienTichTamGiac(int a, int b, int c){
+        int s=0;
+        int p=0;
+        if(a+b>c && a+c>b && b+c>a){
+            p=(a+b+c)/2;
+            s=(int)(Math.sqrt(p*(p-a)*(p-b)*(p-c)));
+        }
+
+        return s;
+    }
+
+    public static void main(String[] args) {
+       int a,b,c;
+       Scanner n=new Scanner(System.in);
+       System.out.print("");
+    }
+}

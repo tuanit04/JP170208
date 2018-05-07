@@ -1,0 +1,133 @@
+package j2se;
+
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Quang
+ * @version 1.0
+ */
+public class Book {
+    //Constant
+    public static final short BOOK_ID=0;
+    public static final String BOOK_TITLE="No Title";
+    public static final String BOOK_NOTES="No Notes";
+    public static final Person BOOK_AUTHOR= new Person();
+    public static final short BOOK_NUMBEROFPAGES=0;
+    public static final String BOOK_PUBLISHER="No Publisher";
+    public static final String BOOK_LINK_DOWLOAD="No Link Dowload";
+
+
+    //Object properties
+    private short book_id;
+    private String book_title;
+    private String book_notes;
+    private Person book_author;
+    private short book_numberOfpages;
+    private String book_publisher;
+    private String book_link_dowload;
+
+    //Constructor methods
+    public Book(){
+            this(Book.BOOK_ID,Book.BOOK_TITLE,Book.BOOK_NOTES, Book.BOOK_AUTHOR,
+            Book.BOOK_NUMBEROFPAGES, Book.BOOK_PUBLISHER, Book.BOOK_LINK_DOWLOAD);
+    }
+    public Book(short book_id,String book_title, String book_notes,
+                Person book_author, short book_numberOfpages, String book_publisher,
+            String book_link_dowload){
+
+        this.book_id = book_id;
+        this.book_title = book_title;
+        this.book_notes = book_notes;
+        this.book_author = book_author ;
+        this.book_numberOfpages = book_numberOfpages;
+        this.book_publisher = book_publisher;
+        this.book_link_dowload = book_link_dowload;
+
+    }
+
+    //Getter methods
+    public short getBook_Id(){
+        return this.book_id;
+    }
+    public String getBook_Title(){
+        return this.book_title;
+    }
+    public String getBook_Notes(){
+        return this.book_notes;
+    }
+    public Person getBook_Author(){
+        return this.book_author;
+    }
+    public short getBook_NumberOfPages(){
+            return this.book_numberOfpages;
+    }
+    public String getBook_Publisher(){
+        return this.book_publisher;
+    }
+    public String getBook_Link_Dowload(){
+        return this.book_link_dowload;
+    }
+
+    //Setter methods
+    public Book setBook_Id(short book_id){
+        this.book_id = book_id;
+        return this;
+    }
+    public Book setBook_Title(String book_title){
+        this.book_title = book_title;
+        return this;
+    }
+    public Book setBook_Notes(String book_notes){
+        this.book_notes = book_notes;
+        return this;
+    }
+    public Book setBook_Author(Person book_author){
+        this.book_author = book_author;
+        return this;
+    }
+    public Book setBook_NumberOfPages(short book_numberOfpages){
+        this.book_numberOfpages = book_numberOfpages;
+        return this;
+    }
+    public Book setBook_Publisher(String book_publisher){
+        this.book_publisher = book_publisher;
+        return this;
+    }
+    public Book setBook_Link_Dowload(String book_link_dowload){
+        this.book_link_dowload = book_link_dowload;
+        return this;
+    }
+
+    //Other's mehthod
+    public String toString(){
+        return book_id+"-"+book_title+"-"+book_notes+"-"+this.book_author.toString()+
+                "-"+book_numberOfpages+"-"+book_publisher+"-"+book_link_dowload;
+    }
+
+    public static void main(String[] args){
+
+        Address addr1=new Address("Ha Noi","Bac Tu Liem", "Pho Nhon");
+        Person p5 = new Person("Tuan","Nguyen",(byte)21 , addr1);
+
+        Book b1 = new Book();
+        Book b2 = new Book((short) 1,"LTHDT","Lap trinh",p5,(short)23,"Quang Huy","Fptbook.com");
+
+        System.out.println(b2);
+    }
+
+
+
+
+
+
+
+
+
+}

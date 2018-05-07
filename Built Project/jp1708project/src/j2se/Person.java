@@ -1,0 +1,136 @@
+package j2se;
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Quang
+ * @version 1.0
+ */
+public class Person {
+
+  //constants
+  public static final String FIRSTNAME="No FirstName";
+  public static final String LASTNAME="No LastName";
+  public static final byte AGE=0;
+  public static final Address ADDRESS= new Address();
+
+  //class' variables
+  private static int count=0;
+
+  //Object properties
+  private String firstName;
+  private String lastName;
+  private byte Age;
+
+  private Address address;
+
+  //Construtor methods
+  public Person(){
+      //   this.firstName= "NO FIRSTNAME";
+      //  this.lastName= "NO LASTNAME";
+      //  this.Age= 0;
+
+         this(Person.FIRSTNAME, Person.LASTNAME,Person.AGE, Person.ADDRESS);
+  }
+
+  public Person(byte Age){
+     this(Person.FIRSTNAME, Person.LASTNAME,Age, Person.ADDRESS);
+  }
+
+  public Person(String firstName,String lastName, byte Age, Address address){
+      this.firstName= firstName;
+      this.lastName= lastName;
+      this.Age= Age;
+
+      //this.address=address;
+      this.address= new Address(address);
+
+
+      //Tang bien dem doi tuong
+      Person.count++;
+  }
+
+
+  //Getter methods
+  public String getFirstName(){
+      return this.firstName;
+  }
+  public String getLastName(){
+      return this.lastName;
+  }
+  public byte getAge(){
+      return this.Age;
+  }
+  public Address getAddress(){
+      return this.address;
+  }
+
+  //Setter methods
+  public Person setFirstName(String firstName){
+      this.firstName=firstName;
+      return this;
+  }
+  public Person setLastName(String lastName){
+      this.lastName=lastName;
+      return this;
+  }
+  public Person setAge(byte Age){
+      this.Age=Age;
+      return this;
+  }
+  public Person setAddress(Address address){
+      this.address = new Address(address);
+      return this;
+  }
+
+  // boc ra gia tri thuoc tinh
+  public Person setAddress(String cityName,
+                           String districtName,
+                           String streetName){
+     this.address = new Address(cityName, districtName,streetName);
+     return this;
+ }
+
+
+
+
+
+
+  //Other's methods
+  public String toString(){
+      return lastName+" "+firstName+" - Tuoi : "+Age;
+  }
+
+  public static int getCountPerson(){
+      return Person.count;
+  }
+
+  protected void finalize() throws Throwable{
+      Person.count--;
+      super.finalize();
+  }
+
+  public static void main(String[] args){
+      //Tao doi tuong
+      Address addr= new Address("Ha Noi","Bac Tu Liem","Pho Nhon");
+
+      Person p;
+      Person p1=new Person();
+      Person p2=new Person((byte) 21);
+      Person p3=new Person("Quang","Nguyen",(byte) 21, addr);
+
+      //Xuat thongtin
+      System.out.println("co "+Person.getCountPerson()+" doi tuong");
+
+      System.out.println(p3);
+
+  }
+
+
+}

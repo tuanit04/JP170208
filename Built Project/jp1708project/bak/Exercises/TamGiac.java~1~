@@ -1,0 +1,32 @@
+package Exercises;
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Quang
+ * @version 1.0
+ */
+public class TamGiac {
+    public static int  getNuaChuViTamGiac(int a, int b, int c) {
+        int cv=0;
+        cv=(a+b+c)/2;
+        return cv;
+    }
+
+    public static int getDienTichTamGiac(int a, int b, int c){
+        int s=0;
+        int p=0;
+        p=a+b+c;
+        s=(int)(Math.sqrt(p*(p-a)*(p-b)*(p-c)));
+        return s;
+    }
+    public static void main(String[] args) {
+        TamGiac tamgiac = new TamGiac();
+    }
+}

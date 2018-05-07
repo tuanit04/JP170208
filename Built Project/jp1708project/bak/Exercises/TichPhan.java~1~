@@ -1,0 +1,22 @@
+package Exercises;
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Quang
+ * @version 1.0
+ */
+public class TichPhan {
+    public TichPhan() {
+    }
+
+    public static void main(String[] args) {
+        TichPhan tichphan = new TichPhan();
+    }
+}

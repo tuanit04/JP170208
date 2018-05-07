@@ -1,0 +1,22 @@
+package j2se;
+
+
+public class TestManager {
+    public TestManager() {
+    }
+
+    public static void main(String[] args) {
+
+        Address addr = new Address("Ha Noi","Cau Giay","Trung Kinh");
+        Address addr1 = new Address("Thai Binh","Hung Ha","Van Lang");
+
+        Person employer = new Employer("Thu","Nguyen Thi",(byte)21,addr,50000,"Quan tri he thong");
+        Person student = new Student("Tuan","Pham Minh",(byte)20,addr1,"(2018)0123055555","KTPM");
+
+        StudentManager sm = new StudentManager();
+        EmployerManager em = new EmployerManager();
+        System.out.println(sm.getInfo(student));
+
+
+    }
+}

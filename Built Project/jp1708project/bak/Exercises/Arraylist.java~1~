@@ -1,0 +1,25 @@
+package Exercises;
+
+import java.util.Collection;
+import java.util.ArrayList;
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Quang
+ * @version 1.0
+ */
+public class Arraylist {
+    public Arraylist() {
+    }
+
+    public static void main(String[] args) {
+        Arraylist arraylist = new Arraylist();
+    }
+}

@@ -1,0 +1,112 @@
+package j2se;
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Tuan
+ * @version 1.0
+ */
+public class MyArrays {
+    public MyArrays() {
+    }
+
+    public static int[] generateArray(int n){
+        //Mang trung gian
+        int[] arrInt = new int[n];
+        for(int i=0; i<n; i++){
+            arrInt[i] = (int)(Math.random()*100);
+        }
+        return arrInt;
+    }
+    public static int[][] generateArray(int rows, int cols){
+        //Mang trung gian
+        int[][] arrInt = new int[rows][cols];
+        for(int i=0; i< rows; i++){
+            arrInt[i] = MyArrays.generateArray(cols);
+        }
+        return arrInt;
+    }
+    //Mang doi tuong
+    public static Person[] generatePerson(int n){
+        //Khai bao mang ket qua
+        Person[] list = new Person[n];
+        //Danh sach ten
+        String[] firstName = {"Anh","Tuan Anh","Anh Tuan","Bao","Bao Han","Minh","Tuan",
+        "Tuan Minh","Trang","Huyen","Ngoc Huyen","Linh","Bao Linh","Anh Linh","Thuy","Nhung",
+        "Huong","Bao Huong","Huong Linh","Trang Linh","Van","La","Hue","Tung","Hai","Son","Huy",
+        "Hung","Huan"};
+        String[] lastName ={"Le","Hoang","Lo","Nguyen","Vu","Tran","Vo","Le","Ho","Ly","To","Doan",
+        "Luong"};
+        return list;
+    }
+    public static int[] sortArray(int[] arrInt, boolean isINC){
+        //Xac dinh huong sap xep
+        int ori = isINC ? 1 : -1;
+        //Sap xep
+        int tmp;
+        for(int i=0; i< arrInt.length-1; i++){
+            for(int j=i+1; j<arrInt.length; j++){
+                if(arrInt[i]*ori > arrInt[j]*ori){
+                    tmp = arrInt[i];//Luu lai gia tri
+                    arrInt[i] = arrInt[j]; //Gan gia tri moi
+                    arrInt[j] = tmp; //Lay lai gia tri cu
+                }
+            }
+        }
+        return arrInt;
+    }
+    public static int[] filterArray(int[] arrInt, boolean isINS){
+        //Sap xep
+        arrInt = MyArrays.sortArray(arrInt,isINS);
+        //Tach nguyen to
+        int[] temp1 = new int[arrInt.length];//Luu nguyen to
+        int[] temp2 = new int[arrInt.length];//Luu khong nguyen to
+        int t1 =0, t2 =0;
+        for(int value: arrInt){
+            if(Examples.checkValue(value)){
+                temp1[t1++] = value;
+            }else{
+                temp2[t2++] = value;
+            }
+        }
+        //Ghep mang
+        for(int i=t1; i<temp1.length; i++){
+            temp1[i] = temp2[i-t1];
+        }
+        return temp1;
+    }
+    //Print methods
+    public static void printArray(int[] arrInt){
+        for(int value:arrInt){
+            System.out.print(value + " ");
+        }
+        System.out.println();
+    }
+    public static void printArray(int[][] arrInt){
+        for(int[] row : arrInt){
+            MyArrays.printArray(row);
+        }
+    }
+    public static void main(String[] args) {
+        //Sinh mang
+       // int[] arrInt = MyArrays.generateArray(20);
+        int[][] arrInt2Chieu = MyArrays.generateArray(10,20);
+        //In
+        //MyArrays.printArray(arrInt);
+        MyArrays.printArray(arrInt2Chieu);
+
+        //Sap xep
+      //  arrInt = MyArrays.sortArray(arrInt, true);
+      //  MyArrays.printArray(arrInt);
+
+        //Loc nguyen to
+       // arrInt = MyArrays.filterArray(arrInt, true);
+       // MyArrays.printArray(arrInt);
+    }
+}

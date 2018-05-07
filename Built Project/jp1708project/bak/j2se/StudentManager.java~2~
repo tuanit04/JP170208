@@ -1,0 +1,33 @@
+package j2se;
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author L? Tu?n
+ * @version 1.0
+ */
+public class StudentManager extends Manager {
+    public StudentManager() {
+    }
+
+    /**
+     * getInfo
+     *
+     * @param p Person
+     * @return String
+     * @todo Implement this j2se.Manager method
+     */
+    public String getInfo(Person p) {
+        return "Student : " + p.toString();
+    }
+
+    public static void main(String[] args) {
+        StudentManager studenmanagerr = new StudentManager();
+    }
+}

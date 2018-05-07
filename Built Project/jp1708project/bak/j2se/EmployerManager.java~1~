@@ -1,0 +1,33 @@
+package j2se;
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author L? Tu?n
+ * @version 1.0
+ */
+public class EmployerManager extends Manager {
+    public EmployerManager() {
+    }
+
+    /**
+     * getInfo
+     *
+     * @param p Person
+     * @return String
+     * @todo Implement this j2se.Manager method
+     */
+    public String getInfo(Person p) {
+        return "Employer : " + p.toString();
+    }
+
+    public static void main(String[] args) {
+        EmployerManager employermanager = new EmployerManager();
+    }
+}

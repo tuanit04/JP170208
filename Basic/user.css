@@ -1,0 +1,10 @@
+﻿/* Các xử lý định dạng cho user.html*/
+
+@import url('basic.css');
+
+.userview{
+	max-width: 980px;
+	height: auto;
+	margin: 0 auto;
+	background: #efefff;
+}

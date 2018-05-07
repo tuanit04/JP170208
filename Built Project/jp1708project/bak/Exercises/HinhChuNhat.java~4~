@@ -1,0 +1,48 @@
+package Exercises;
+
+import java.util.Scanner;
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Quang
+ * @version 1.0
+ */
+public class HinhChuNhat {
+    public static int getChuVi(int a, int b) {
+        int p=0;
+        if(a*b!=0){
+            p=2*(a+b);
+        }
+
+        return p;
+    }
+    public static int getDienTich(int a, int b){
+        int s=0;
+        if(a*b!=0){
+            s=a*b;
+        }
+        return s;
+    }
+
+
+    public static void main(String[] args) {
+        Scanner cd = new Scanner(System.in);
+        int a,b;
+       System.out.print("Nhap vao so a: ");
+       a = cd.nextInt();
+       System.out.print("Nhap vso so b: ");
+       b=cd.nextInt();
+
+       //In ra
+       System.out.print("Chu vi hcn la: "+HinhChuNhat.getChuVi(a,b));
+       System.out.print("Dien tich hcn la: "+HinhChuNhat.getDienTich(a,b));
+
+
+    }
+}

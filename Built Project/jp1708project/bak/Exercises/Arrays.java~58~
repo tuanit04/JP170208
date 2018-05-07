@@ -1,0 +1,71 @@
+package Exercises;
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Quang
+ * @version 1.0
+ */
+public class Arrays {
+    public Arrays(){
+    }
+    public static int[] generateArray(int n){
+        int[] arrInt = new int[n];
+        for(int i=0;i<n;i++){
+            arrInt[i] = (int)(Math.random()*100);
+        }
+        return arrInt;
+    }
+
+
+    public static int[][] generateArrays( int rows, int cols){
+        int[][] arrInt = new int[rows][cols];
+
+          for (int i = 0; i < rows; i++) {
+            arrInt[i] = Arrays.generateArray(cols);
+        }
+        return arrInt;
+    }
+    public static int[][] averageArrays(int[][] arrInt,int rows, int cols){
+        int a,b;
+        int avg=0, sum=0;
+        for(a=0;a<rows;a++){
+            for (b = 0; b < cols; b++) {
+                sum += arrInt[a][b];
+            }
+        }
+        avg=(int)sum/(a);
+
+        if(arrInt[a]< avg){
+          return arrInt;
+        }
+        return arrInt;
+    }
+
+
+
+    //in mang
+    public static void printArrays(int[] arrInt){
+        for(int value: arrInt){
+            System.out.print(value+" ");
+        }
+        System.out.println();
+    }
+    public static void printArray(int[][] arrInt){
+        for(int[] rows: arrInt){
+            Arrays.printArrays(rows);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] arrInt = Arrays.generateArrays(10,20);
+        arrInt = Arrays.averageArrays(arrInt,10,20);
+        Arrays.printArray(arrInt);
+    }
+}

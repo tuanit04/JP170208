@@ -1,0 +1,26 @@
+package j2se;
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author Tuan
+ * @version 1.0
+ */
+public class Examples {
+    public Examples() {
+    }
+
+    public static void main(String[] args) {
+        Examples examples = new Examples();
+        //Sinh ngau nhien 1 gia tri
+        int n  = (int)(Math.random()*100);
+        //In ra man hinh
+        System.out.println("Gia tri n = " + n);
+    }
+}

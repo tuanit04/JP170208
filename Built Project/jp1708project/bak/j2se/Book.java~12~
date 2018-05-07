@@ -1,0 +1,123 @@
+package j2se;
+
+/**
+ * <p>Title: JP1708 Project</p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author  Tuan
+ * @version 1.0
+ */
+public class Book {
+    //Constants
+    public static final short BOOK_ID = 0;
+    public static final String BOOK_TITLES = "NO BOOK TITLES";
+    public static final String BOOK_NOTES = "NO BOOK NOTES";
+    public static final Person BOOK_AUTHOR = new Person();
+    public static final short BOOK_NUMBEROFPAGES = 0;
+    public static final String BOOK_PUBLISHER = "NO BOOK PUBLISHER";
+    public static final String BOOK_LINK_DOWNLOAD = "NO BOOK LINK DOWNLOAD";
+    public static int count = 0;
+    //Object's properties
+    private short book_id;
+    private String book_titles;
+    private String book_notes;
+    private Person book_author;
+    private short book_numberofpages;
+    private String book_publisher;
+    private String book_link_download;
+    //CONSTRUCTOR METHODS
+    public Book() {
+        this(BOOK_ID,BOOK_TITLES,BOOK_NOTES,BOOK_AUTHOR,
+             BOOK_NUMBEROFPAGES,BOOK_PUBLISHER,BOOK_LINK_DOWNLOAD);
+    }
+    public Book(short book_id, String book_titles, String book_notes, Person book_author,
+           short book_numberofpages, String book_publisher, String book_link_download) {
+        this.book_id = book_id;
+        this.book_titles = book_titles;
+        this.book_notes = book_notes;
+        this.book_author = book_author;
+        this.book_numberofpages = book_numberofpages;
+        this.book_publisher = book_publisher;
+        this.book_link_download = book_link_download;
+        Book.count++;
+    }
+    //SETTER
+    public Book setBookID(short book_id){
+        this.book_id = book_id;
+        return this;
+    }
+    public Book setBookTitles(String book_titles){
+        this.book_titles = book_titles;
+        return this;
+    }
+    public Book setBookNotes(String book_notes){
+        this.book_notes = book_notes;
+        return this;
+    }
+    public Book setBookAuthor(Person book_author){
+        this.book_author = book_author;
+        return this;
+    }
+    public Book setBookNumberOfPages(short book_numberofpages){
+            this.book_numberofpages = book_numberofpages;
+            return this;
+    }
+    public Book setBookPublisher(String book_publisher){
+            this.book_publisher = book_publisher;
+            return this;
+    }
+    public Book setBookLinkDownload(String book_link_download){
+                this.book_link_download = book_link_download;
+                return this;
+    }
+    //GETTER
+    public short getBookID(){
+        return this.book_id;
+    }
+    public String getBookTitles(){
+        return this.book_titles;
+    }
+    public String getBookNotes(){
+        return this.book_notes;
+    }
+    public Person getBookAuhor(){
+        return this.book_author;
+    }
+    public short getBookNumberOfPages(){
+        return this.book_numberofpages;
+    }
+    public String getBookPublisher(){
+        return this.book_publisher;
+    }
+    public String getBookLinkDownload(){
+        return this.book_link_download;
+    }
+    public static void main(String[] args) {
+        Book book = new Book();
+    }
+    //Other methods
+    public static int getCountBook(){
+            return Book.count;
+        }
+    protected void finalize() throws Throwable{
+            Book.count--;
+            super.finalize();
+    }
+    public String toString(){
+        return "Book ID : " + this.book_id + " - Book titles : " + this.book_titles
+                + " - Book notes : " + this.book_notes + " - Book author : " + this.book_author
+                + " - Book number of pages : " + this.book_numberofpages + " - Book pulisher : "
+                + this.book_publisher + " - Book link download : " + this.book_link_download ;
+    }
+    public static void main(String[] args){
+        Book book1 = new Book();
+        System.out.println(book1);
+        Book book2 = new Book(1,"CNTT","IT",new Person(),150,"HaUI","abc.com");
+        System.out.println(book2);
+    }
+}
